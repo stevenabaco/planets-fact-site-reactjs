@@ -1,20 +1,73 @@
 //Import Modules
-import React from "react";
+import React, { useState } from 'react';
 //Import Dependencies
-
+import '../../';
 //Import CSS
 import './Planet.css';
+//Import Images
+import earthSummaryImg from '../../assets/planet-earth.svg';
+import earthStructureImg from '../../assets/planet-earth-internal.svg';
+import earthSurfaceImg from '../../assets/geology-earth.png';
+
 
 function Planet(props) {
-  return (
+	//Set state hooks
+	const [active, setActive] = useState(false);
+	const [defaultActive, setDefaultActive] = useState(true);
+
+	// Create helpers and handlers
+	const toggleClass = () => {
+		setActive(!active);
+		setDefaultActive(!defaultActive);
+	};
+	return (
 		<div id='planet__wrapper' planet={props.planet}>
-      <div id='content__toolbar__wrapper'>
-        <ul id='content__toolbar'>
-          <li className="active">Overview</li>
-          <li>Structure</li>
-          <li>Surface</li>
-        </ul>
-      </div>
+			<div id='planet__content__toolbar__wrapper'>
+				<ul id='planet__content__toolbar'>
+					<li
+						onClick={toggleClass}
+						className={defaultActive ? `active ${props.planet}` : props.planet}>
+						Overview
+					</li>
+					<li
+						onClick={toggleClass}
+						className={active ? `active ${props.planet}` : props.planet}>
+						Structure
+					</li>
+					<li
+						onClick={toggleClass}
+						className={active ? `active ${props.planet}` : props.planet}>
+						Surface
+					</li>
+				</ul>
+			</div>
+			<div id='planet__img'>
+				<img src={earthSummaryImg} alt='earth'></img>
+			</div>
+			<div id='planet__content'>
+				<h1>{props.planet}</h1>
+				<p>
+					Third planet from the Sun and the only known planet to harbor life.
+					About 29.2% of Earth's surface is land with remaining 70.8% is covered
+					with water. Earth's distance from the Sun, physical properties and
+					geological history have allowed life to evolve and thrive.
+				</p>
+				<p>Source: Wikipedia</p>
+			</div>
+			<div id='facts' className='flex'>
+				<div id='rotation' className='planet__facts flex'>
+					<p>Rotation Time</p> <span>0.99 days</span>
+				</div>
+				<div id='revolution' className='planet__facts flex'>
+					<p>Revolution Time</p> <span>365.26 days</span>
+				</div>
+				<div id='radius' className='planet__facts flex'>
+					<p>Radius</p> <span>6,371 KM</span>
+				</div>
+				<div id='temp' className='planet__facts flex'>
+					<p>Average Temp</p> <span>16°c</span>
+				</div>
+			</div>
 		</div>
 	);
 }

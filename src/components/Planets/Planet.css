@@ -1,14 +1,16 @@
+
+
 #planet__wrapper{
   width: 100%;
   height: 100%;
 }
 
-#content__toolbar__wrapper {
+#planet__content__toolbar__wrapper {
   border-bottom: 1px solid grey;
   height: 50px;
 }
 
-#content__toolbar{
+#planet__content__toolbar{
   display: flex;
   justify-content: space-evenly;
   align-items:stretch;
@@ -17,8 +19,58 @@
   padding-top: 1rem;
 }
 
-#content__toolbar li {
-  border-bottom: 2px solid red;
+#planet__content__toolbar li {
+  border-bottom: 2px solid transparent;
   height:100%;
 
+}
+
+#planet__img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+height: 306px;
+}
+
+#planet__img img{
+  width: 173px;
+  height: 173px;
+  text-align: center;
+}
+
+#planet__content {
+  width:327px;
+  height: 235px;
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#planet__content h1 {
+  font-family: 'Antonio', sans-serif;
+  text-transform: uppercase;
+  font-size: 40px;
+}
+
+#facts {
+  flex-direction: column;
+  justify-content: space-between;
+  width: 327px;
+  height: 216px;
+  margin: 2rem auto;
+}
+.planet__facts {
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  width: 100%;
+  height: 48px;
+  border: 1px solid var(--color-4)
+}
+
+/* SHARED CLASSES */
+.flex {
+  display: flex;
 }
