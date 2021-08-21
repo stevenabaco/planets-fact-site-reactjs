@@ -8,14 +8,14 @@ import './Layout.css';
 import backgroundStars from '../../assets/background-stars.svg';
 
 const Layout = props => {
-
-  return (
-  
-    <div class="layout__main" style={{backgroundImage: `url(${backgroundStars})`}}>
-        <Navbar/>
-    </div>
-
-  )
-}
+	return (
+		<div
+			className='layout__main'
+			style={{ backgroundImage: `url(${backgroundStars})`}}>
+			<Navbar />
+			<main>{props.children}</main>
+		</div>
+	);
+};
 
 export default Layout;
