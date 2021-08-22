@@ -9,37 +9,58 @@ import earthSummaryImg from '../../assets/planet-earth.svg';
 import earthStructureImg from '../../assets/planet-earth-internal.svg';
 import earthSurfaceImg from '../../assets/geology-earth.png';
 
-
 function Planet(props) {
 	//Set state hooks
 	const [active, setActive] = useState(false);
 	const [defaultActive, setDefaultActive] = useState(true);
-
+  const contentTabs = [
+    {
+      id: '1',
+      name: 'content',
+      label: 'Overview',
+      value: 'overview',
+      defaultChecked: true
+    },
+    {
+      id: '2',
+      name: 'content',
+      label: 'Structure',
+      value: 'structure',
+      defaultChecked: false
+    },
+    {
+      id: '3',
+      name: 'content',
+      label: 'Surface',
+      value: 'surface',
+      defaultChecked: false
+    }
+  ]
 	// Create helpers and handlers
-	const toggleClass = () => {
-		setActive(!active);
-		setDefaultActive(!defaultActive);
-	};
+  const handleClick = (e) => {
+    
+  }
 	return (
 		<div id='planet__wrapper' planet={props.planet}>
-			<div id='planet__content__toolbar__wrapper'>
-				<ul id='planet__content__toolbar'>
-					<li
-						onClick={toggleClass}
-						className={defaultActive ? `active ${props.planet}` : props.planet}>
-						Overview
-					</li>
-					<li
-						onClick={toggleClass}
-						className={active ? `active ${props.planet}` : props.planet}>
-						Structure
-					</li>
-					<li
-						onClick={toggleClass}
-						className={active ? `active ${props.planet}` : props.planet}>
-						Surface
-					</li>
-				</ul>
+			<div id='radio__toolbar'>
+        {contentTabs.map(({ id, name, label, value, defaultChecked }) => (
+          
+          <div key={id}>
+            <input type='radio'
+              key={id}
+              id={id}
+              name={name}
+              value={value.toString()}
+              defaultChecked={defaultChecked}
+              className={props.planet}
+              onChange={e=>console.log(value)}
+              tabIndex={+id}
+            />
+
+            <label htmlFor={id}>{label}</label>
+          </div>
+        ))}
+				
 			</div>
 			<div id='planet__img'>
 				<img src={earthSummaryImg} alt='earth'></img>
