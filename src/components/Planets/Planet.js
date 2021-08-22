@@ -13,54 +13,51 @@ function Planet(props) {
 	//Set state hooks
 	const [active, setActive] = useState(false);
 	const [defaultActive, setDefaultActive] = useState(true);
-  const contentTabs = [
-    {
-      id: '1',
-      name: 'content',
-      label: 'Overview',
-      value: 'overview',
-      defaultChecked: true
-    },
-    {
-      id: '2',
-      name: 'content',
-      label: 'Structure',
-      value: 'structure',
-      defaultChecked: false
-    },
-    {
-      id: '3',
-      name: 'content',
-      label: 'Surface',
-      value: 'surface',
-      defaultChecked: false
-    }
-  ]
+	const contentTabs = [
+		{
+			id: '1',
+			name: 'content',
+			label: 'Overview',
+			value: 'overview',
+			defaultChecked: true,
+		},
+		{
+			id: '2',
+			name: 'content',
+			label: 'Structure',
+			value: 'structure',
+			defaultChecked: false,
+		},
+		{
+			id: '3',
+			name: 'content',
+			label: 'Surface',
+			value: 'surface',
+			defaultChecked: false,
+		},
+	];
 	// Create helpers and handlers
-  const handleClick = (e) => {
-    
-  }
+	const handleClick = e => {};
 	return (
 		<div id='planet__wrapper' planet={props.planet}>
-			<div id='radio__toolbar'>
-        {contentTabs.map(({ id, name, label, value, defaultChecked }) => (
-          
-          <div key={id}>
-            <input type='radio'
-              key={id}
-              id={id}
-              name={name}
-              value={value.toString()}
-              defaultChecked={defaultChecked}
-              className={props.planet}
-              onChange={e=>console.log(value)}
-              tabIndex={+id}
-            />
+			<div id='radio__toolbar' className='flex'>
+				{contentTabs.map(({ id, name, label, value, defaultChecked }) => (
+					<div key={id}>
+						<input
+							type='radio'
+							key={id}
+							id={id}
+							name={name}
+							value={value.toString()}
+							defaultChecked={defaultChecked}
+							className={props.planet}
+							onChange={e => console.log(value)}
+							tabIndex={+id}
+						/>
 
-            <label htmlFor={id}>{label}</label>
-          </div>
-        ))}
-				
+						<label htmlFor={id}>{label}</label>
+					</div>
+				))}
 			</div>
 			<div id='planet__img'>
 				<img src={earthSummaryImg} alt='earth'></img>
