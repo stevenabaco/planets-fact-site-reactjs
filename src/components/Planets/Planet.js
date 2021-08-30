@@ -101,7 +101,7 @@ function Planet(props) {
 			</div>
 			<div id='planet__content'>
 				<h1>{currentPlanet}</h1>
-				{<p>{data[index].overview.content}</p>}
+				{<p>{data && data.length > 0 && data[index].overview.content}</p>}
 				<p>Source: Wikipedia</p>
 			</div>
 			<div id='facts' className='flex'>
