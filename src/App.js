@@ -14,7 +14,7 @@ function App() {
 			<Layout>
         <Switch>
           <Route exact path="/earth">
-            <Planet planet={"Earth"}/>
+						<Planet planet={"Earth"} index={2}/>
           </Route>
 					<Route exact path="/">
 						<Redirect to="/earth" />

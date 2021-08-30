@@ -18,7 +18,8 @@ import marsSurfaceImg from '../../assets/geology-mars.png';
 
 function Planet(props) {
 	// Set states
-	const [currentPlanet, setCurrentPlanet] = useState('Earth');
+	const [currentPlanet, setCurrentPlanet] = useState(props.planet);
+	const [index, setIndex] = useState(props.index);
 	const [content, setContent] = useState('overview');
 	const [planetImg, setPlanetImg] = useState(earthSummaryImg);
 	const [data, setData] = useState([]);
@@ -49,13 +50,6 @@ function Planet(props) {
 	}, []);
 
 
-	// Logic to handle switching planets
-	const changePlanet = planet => {
-		for (var key in data) {
-			if (data[key].name === planet) {
-			}
-		}
-	};
 
 	return (
 		<div id='planet__wrapper' planet={currentPlanet}>
@@ -74,8 +68,12 @@ function Planet(props) {
 									defaultChecked={defaultChecked}
 									className={props.planet}
 									onChange={() => {
-										console.log();
+										console.log(value);
+										console.log(valueimg);
+
 										setPlanetImg(valueimg);
+										setContent(value);
+
 									}}
 									tabIndex={+id}
 									checked={content === label}
@@ -102,8 +100,8 @@ function Planet(props) {
 				)}
 			</div>
 			<div id='planet__content'>
-				<h1>{props.planet}</h1>
-				{data & (data.length > 0) && data.map(selectedPlanet => <p>{selectedPlanet.rotation}</p>)}
+				<h1>{currentPlanet}</h1>
+				{<p>{data[index].overview.content}</p>}
 				<p>Source: Wikipedia</p>
 			</div>
 			<div id='facts' className='flex'>
