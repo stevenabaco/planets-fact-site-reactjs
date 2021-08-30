@@ -1,9 +1,8 @@
 #navbar {
-  position: relative;
-	height: 85px;
+	position: relative;
+	height: 68px;
   justify-content: center;
-	padding: 17px 24px;
-	position: sticky;
+	/* padding: 17px 24px; */
 	border-bottom: 1px solid var(--color-4);
 }
 
@@ -29,24 +28,29 @@
 }
 
 .nav__menu { 
+	position: relative;
 	display: flex;
 	flex-direction:column;
   width:100%;
   height:89vh;
 	position: absolute;
-	top: 86px;
+	top: 69px;
 	transform: translateX(-110%);
   opacity: 1;
   align-items: center;
 	padding-top: 1rem;
+
 }
 
 .nav__menu.active {
+	position: absolute;
+	z-index: 1000;
   transform: translateX(0);
   background-color: black;
 	left: 0;
   opacity: 1;
 	transition: all .5s ease-out;
+	
 }
 
 .nav__item {
@@ -105,7 +109,7 @@
 	position: absolute;
 	top: 0;
 	right: 0;
-	transform: translate(-70%, 50%);
+	/* transform: translate(-70%, 50%); */
 	font-size: 2rem;
 	cursor: pointer;
 }

@@ -3,6 +3,7 @@
 #planet__wrapper{
   width: 100%;
   height: 100%;
+  z-index: -1;
 }
 
 #planet__content__toolbar__wrapper {
@@ -25,11 +26,12 @@
 
 }
 
+/* Planet images */
 #planet__img {
   display: flex;
   justify-content: center;
   align-items: center;
-height: 306px;
+  height: 306px;
 }
 
 #planet__img img{
@@ -37,6 +39,18 @@ height: 306px;
   height: 173px;
   text-align: center;
 }
+
+#summary__surface__container {
+  position: relative;
+}
+#surface__img {
+  position: absolute;
+  max-width: 125px;
+  max-height: 125px;
+  left: 15%;
+  top:55%;
+}
+
 
 #planet__content {
   width:327px;

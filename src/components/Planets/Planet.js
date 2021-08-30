@@ -1,75 +1,109 @@
 //Import Modules
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 //Import Dependencies
-import '../../';
+import { ContentTabs } from '../ContentToolbar/ContentToolbar';
+
 //Import CSS
 import './Planet.css';
 //Import Images
 import earthSummaryImg from '../../assets/planet-earth.svg';
 import earthStructureImg from '../../assets/planet-earth-internal.svg';
 import earthSurfaceImg from '../../assets/geology-earth.png';
+import jupiterSummaryImg from '../../assets/planet-jupiter.svg';
+import jupiterStructureImg from '../../assets/planet-jupiter-internal.svg';
+import jupiterSurfaceImg from '../../assets/geology-jupiter.png';
+import marsSummaryImg from '../../assets/planet-mars.svg';
+import marsStructureImg from '../../assets/planet-mars-internal.svg';
+import marsSurfaceImg from '../../assets/geology-mars.png';
 
 function Planet(props) {
-	//Set state hooks
-	const [active, setActive] = useState(false);
-	const [defaultActive, setDefaultActive] = useState(true);
-	const contentTabs = [
-		{
-			id: '1',
-			name: 'content',
-			label: 'Overview',
-			value: 'overview',
-			defaultChecked: true,
-		},
-		{
-			id: '2',
-			name: 'content',
-			label: 'Structure',
-			value: 'structure',
-			defaultChecked: false,
-		},
-		{
-			id: '3',
-			name: 'content',
-			label: 'Surface',
-			value: 'surface',
-			defaultChecked: false,
-		},
-	];
-	// Create helpers and handlers
-	const handleClick = e => {};
-	return (
-		<div id='planet__wrapper' planet={props.planet}>
-			<div id='radio__toolbar' className='flex'>
-				{contentTabs.map(({ id, name, label, value, defaultChecked }) => (
-					<div key={id}>
-						<input
-							type='radio'
-							key={id}
-							id={id}
-							name={name}
-							value={value.toString()}
-							defaultChecked={defaultChecked}
-							className={props.planet}
-							onChange={e => console.log(value)}
-							tabIndex={+id}
-						/>
+	// Set states
+	const [currentPlanet, setCurrentPlanet] = useState('Earth');
+	const [content, setContent] = useState('overview');
+	const [planetImg, setPlanetImg] = useState(earthSummaryImg);
+	const [data, setData] = useState([]);
 
-						<label htmlFor={id}>{label}</label>
-					</div>
-				))}
+	// Assign DOM elements
+
+	// Use fetch to consume local JSON data from API
+
+	const getData = () => {
+		fetch('./data.json', {
+			headers: {
+				'Content-Type': 'application/json',
+				Accept: 'application/json',
+			},
+		})
+			.then(function (response) {
+				console.log(response);
+				return response.json();
+			})
+			.then(function (myJson) {
+				console.log(myJson);
+				setData(myJson);
+			});
+	};
+	// Runs get data on first
+	useEffect(() => {
+		getData();
+	}, []);
+
+
+	// Logic to handle switching planets
+	const changePlanet = planet => {
+		for (var key in data) {
+			if (data[key].name === planet) {
+			}
+		}
+	};
+
+	return (
+		<div id='planet__wrapper' planet={currentPlanet}>
+			<div id='radio__toolbar' className='flex'>
+				{ContentTabs.map(
+					({ id, name, label, value, valueimg, defaultChecked }) => (
+						<div id='contentSelector' key={id}>
+							<form>
+								<input
+									type='radio'
+									key={id}
+									id={id}
+									name={name}
+									value={value}
+									valueimg={valueimg}
+									defaultChecked={defaultChecked}
+									className={props.planet}
+									onChange={() => {
+										console.log();
+										setPlanetImg(valueimg);
+									}}
+									tabIndex={+id}
+									checked={content === label}
+								/>
+
+								<label htmlFor={id}>{label}</label>
+							</form>
+						</div>
+					)
+				)}
 			</div>
 			<div id='planet__img'>
-				<img src={earthSummaryImg} alt='earth'></img>
+				{planetImg === earthSurfaceImg ? (
+					<div id='summary__surface__container'>
+						<img
+							id='summary__img'
+							src={props.planet === 'Earth' ? earthSummaryImg : null}
+							alt='Earth'
+						/>
+						<img id='surface__img' src={planetImg} alt='earth' />
+					</div>
+				) : (
+					<img src={planetImg} alt='earth'></img>
+				)}
 			</div>
 			<div id='planet__content'>
 				<h1>{props.planet}</h1>
-				<p>
-					Third planet from the Sun and the only known planet to harbor life.
-					About 29.2% of Earth's surface is land with remaining 70.8% is covered
-					with water. Earth's distance from the Sun, physical properties and
-					geological history have allowed life to evolve and thrive.
-				</p>
+				{data & (data.length > 0) && data.map(selectedPlanet => <p>{selectedPlanet.rotation}</p>)}
 				<p>Source: Wikipedia</p>
 			</div>
 			<div id='facts' className='flex'>
