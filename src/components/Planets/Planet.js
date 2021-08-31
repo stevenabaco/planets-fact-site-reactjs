@@ -20,7 +20,7 @@ function Planet(props) {
 	// Set states
 	const [currentPlanet, setCurrentPlanet] = useState(props.planet);
 	const [index, setIndex] = useState(props.index);
-	const [content, setContent] = useState('overview');
+	const [content, setContent] = useState('Overview');
 	const [planetImg, setPlanetImg] = useState(earthSummaryImg);
 	const [data, setData] = useState([]);
 
@@ -63,7 +63,7 @@ function Planet(props) {
 									key={id}
 									id={id}
 									name={name}
-									value={value}
+									value={value.toString()}
 									valueimg={valueimg}
 									defaultChecked={defaultChecked}
 									className={props.planet}
