@@ -49,8 +49,6 @@ function Planet(props) {
 		getData();
 	}, []);
 
-
-
 	return (
 		<div id='planet__wrapper' planet={currentPlanet}>
 			<div id='radio__toolbar' className='flex'>
@@ -72,8 +70,7 @@ function Planet(props) {
 										console.log(valueimg);
 
 										setPlanetImg(valueimg);
-										setContent(value);
-
+										setContent(label);
 									}}
 									tabIndex={+id}
 									checked={content === label}
@@ -101,21 +98,48 @@ function Planet(props) {
 			</div>
 			<div id='planet__content'>
 				<h1>{currentPlanet}</h1>
-				{<p>{data && data.length > 0 && data[index].overview.content}</p>}
+				{
+					<p>
+						{data &&
+							data.length > 0 &&
+							content === 'Overview' &&
+							data[index].overview.content}
+					</p>
+				}
+				{
+					<p>
+						{data &&
+							data.length > 0 &&
+							content === 'Structure' &&
+							data[index].structure.content}
+					</p>
+				}
+				{
+					<p>
+						{data &&
+							data.length > 0 &&
+							content === 'Surface' &&
+							data[index].geology.content}
+					</p>
+				}
 				<p>Source: Wikipedia</p>
 			</div>
 			<div id='facts' className='flex'>
 				<div id='rotation' className='planet__facts flex'>
-					<p>Rotation Time</p> <span>0.99 days</span>
+					<p>Rotation Time</p>{' '}
+					<span>{data && data.length > 0 && data[index].rotation}</span>
 				</div>
 				<div id='revolution' className='planet__facts flex'>
-					<p>Revolution Time</p> <span>365.26 days</span>
+					<p>Revolution Time</p>{' '}
+					<span>{data && data.length > 0 && data[index].revolution}</span>
 				</div>
 				<div id='radius' className='planet__facts flex'>
-					<p>Radius</p> <span>6,371 KM</span>
+					<p>Radius</p>{' '}
+					<span>{data && data.length > 0 && data[index].radius}</span>
 				</div>
 				<div id='temp' className='planet__facts flex'>
-					<p>Average Temp</p> <span>16°c</span>
+					<p>Average Temp</p>{' '}
+					<span>{data && data.length > 0 && data[index].temperature}</span>
 				</div>
 			</div>
 		</div>
