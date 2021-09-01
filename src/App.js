@@ -14,28 +14,15 @@ import Planet from './components/Planets/Planet';
 
 //Import CSS files
 import './App.css';
-//Import Images
-// import earthSummaryImg from './assets/planet-earth.svg';
-// import earthStructureImg from './assets/planet-earth-internal.svg';
-// import earthSurfaceImg from './assets/geology-earth.png';
-// import jupiterSummaryImg from './assets/planet-jupiter.svg';
-// import jupiterStructureImg from './assets/planet-jupiter-internal.svg';
-// import jupiterSurfaceImg from './assets/geology-jupiter.png';
-// import marsSummaryImg from './assets/planet-mars.svg';
-// import marsStructureImg from './assets/planet-mars-internal.svg';
-// import marsSurfaceImg from './assets/geology-mars.png';
-// import mercurySummaryImg from './assets/planet-mercury.svg';
-// import mercuryStructureImg from './assets/planet-mercury-internal.svg';
-// import mercurySurfaceImg from './assets/geology-mercury.png';
 
 function App() {
 	const [data, setData] = useState(PlanetData);
 	const [currentPlanet, setCurrentPlanet] = useState('Earth');
 	const [planetIndex, setPlanetIndex] = useState(2);
 	const [category, setCategory] = useState('Overview');
-	// const [planetImg, setPlanetImg] = useState(earthSummaryImg);
 
-	// Use fetch to consume local JSON data from API
+
+	// Use fetch to consume local JSON data from API -
 	// const getData = () => {
 	// 	fetch('./data.js', {
 	// 		headers: {
@@ -60,25 +47,14 @@ function App() {
 	return (
 		<Provider
 			value={{
-				// State
 				data,
 				setData,
 				currentPlanet,
 				setCurrentPlanet,
 				planetIndex,
 				setPlanetIndex,
-				// planetImg,
-				// setPlanetImg,
 				category,
 				setCategory,
-				// Images
-				// earthSummaryImg,
-				// earthStructureImg,
-				// earthSurfaceImg,
-				// mercurySummaryImg,
-				// mercuryStructureImg,
-				// mercurySurfaceImg,
-
 			}}>
 			<Router>
 				<Layout>
@@ -87,6 +63,24 @@ function App() {
 							<Planet />
 						</Route>
 						<Route exact path='/mercury'>
+							<Planet />
+						</Route>
+						<Route exact path='/venus'>
+							<Planet />
+						</Route>
+						<Route exact path='/mars'>
+							<Planet />
+						</Route>
+						<Route exact path='/jupiter'>
+							<Planet />
+						</Route>
+						<Route exact path='/saturn'>
+							<Planet />
+						</Route>
+						<Route exact path='/uranus'>
+							<Planet />
+						</Route>
+						<Route exact path='/neptune'>
 							<Planet />
 						</Route>
 						<Route exact path='/'>

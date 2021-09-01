@@ -19,17 +19,57 @@ function Navbar() {
 					setClick(!click);
 				};
 				const closeMobileMenu = () => setClick(false);
-				const handleSelection = () => {
-					context.setCurrentPlanet('Mercury');
+
+				const handleLogo = () => {
+					context.setCurrentPlanet('Earth');
+					context.setPlanetIndex(2);
+					closeMobileMenu()}
+
+				const handleMercury = () => {
+					context.setCurrentPlanet("Mercury");
 					context.setPlanetIndex(0);
 					closeMobileMenu()
-
+				};
+				const handleVenus = () => {
+					context.setCurrentPlanet("Venus");
+					context.setPlanetIndex(1);
+					closeMobileMenu()
+				};
+				const handleEarth = () => {
+					context.setCurrentPlanet("Earth");
+					context.setPlanetIndex(2);
+					closeMobileMenu()
+				};
+				const handleMars = () => {
+					context.setCurrentPlanet("Mars");
+					context.setPlanetIndex(3);
+					closeMobileMenu()
+				};
+				const handleJupiter = () => {
+					context.setCurrentPlanet("Jupiter");
+					context.setPlanetIndex(4);
+					closeMobileMenu()
+				};
+				const handleSaturn = () => {
+					context.setCurrentPlanet("Saturn");
+					context.setPlanetIndex(5);
+					closeMobileMenu()
+				};
+				const handleUranus = () => {
+					context.setCurrentPlanet("Uranus");
+					context.setPlanetIndex(6);
+					closeMobileMenu()
+				};
+				const handleNeptune = () => {
+					context.setCurrentPlanet("Neptune");
+					context.setPlanetIndex(7);
+					closeMobileMenu()
 				};
 
 				return (
 					<>
 						<nav id='navbar'>
-							<NavLink to='/' exact id='navbar__logo' onClick={closeMobileMenu}>
+							<NavLink to='/' exact id='navbar__logo' onClick={handleLogo}>
 								The planets
 							</NavLink>
 							<div id='menu__icon' onClick={handleClick}>
@@ -40,8 +80,8 @@ function Navbar() {
 									<NavLink
 										exact
 										to='/mercury'
-										className='nav__links'
-										onClick={handleSelection}>
+										onClick={handleMercury}
+										className='nav__links'>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -59,7 +99,7 @@ function Navbar() {
 										exact
 										to='/venus'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleVenus}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -77,7 +117,7 @@ function Navbar() {
 										exact
 										to='/earth'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleEarth}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -95,7 +135,7 @@ function Navbar() {
 										exact
 										to='/mars'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleMars}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -113,7 +153,7 @@ function Navbar() {
 										exact
 										to='/jupiter'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleJupiter}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -131,7 +171,7 @@ function Navbar() {
 										exact
 										to='/saturn'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleSaturn}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -149,7 +189,7 @@ function Navbar() {
 										exact
 										to='/uranus'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleUranus}>
 										{click ? (
 											<>
 												<div className='planet__marker'>
@@ -167,7 +207,7 @@ function Navbar() {
 										exact
 										to='/neptune'
 										className='nav__links'
-										onClick={closeMobileMenu}>
+										onClick={handleNeptune}>
 										{click ? (
 											<>
 												{' '}

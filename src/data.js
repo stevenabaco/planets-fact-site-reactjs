@@ -94,9 +94,9 @@ export const PlanetData = [
     "radius": "3,389.5 KM",
     "temperature": "-28°c",
     "images": {
-      "planet": require("./assets/planet-mars.svg"),
-      "internal": require("./assets/planet-mars-internal.svg"),
-      "geology": require("./assets/geology-mars.png")
+      "planet": require("./assets/planet-mars.svg").default,
+      "internal": require("./assets/planet-mars-internal.svg").default,
+      "geology": require("./assets/geology-mars.png").default
     }
   },
   {
@@ -119,9 +119,9 @@ export const PlanetData = [
     "radius": "69,911 KM",
     "temperature": "-108°c",
     "images": {
-      "planet": require("./assets/planet-jupiter.svg"),
-      "internal": require("./assets/planet-jupiter-internal.svg"),
-      "geology": require("./assets/geology-jupiter.png")
+      "planet": require("./assets/planet-jupiter.svg").default,
+      "internal": require("./assets/planet-jupiter-internal.svg").default,
+      "geology": require("./assets/geology-jupiter.png").default
     }
   },
   {
@@ -144,9 +144,9 @@ export const PlanetData = [
     "radius": "58,232 KM",
     "temperature": "-138°c",
     "images": {
-      "planet": require("./assets/planet-saturn.svg"),
-      "internal": require("./assets/planet-saturn-internal.svg"),
-      "geology": require("./assets/geology-saturn.png")
+      "planet": require("./assets/planet-saturn.svg").default,
+      "internal": require("./assets/planet-saturn-internal.svg").default,
+      "geology": require("./assets/geology-saturn.png").default
     }
   },
   {
@@ -169,9 +169,9 @@ export const PlanetData = [
     "radius": "25,362 KM",
     "temperature": "-195°c",
     "images": {
-      "planet": require("./assets/planet-uranus.svg"),
-      "internal": require("./assets/planet-uranus-internal.svg"),
-      "geology": require("./assets/geology-uranus.png")
+      "planet": require("./assets/planet-uranus.svg").default,
+      "internal": require("./assets/planet-uranus-internal.svg").default,
+      "geology": require("./assets/geology-uranus.png").default
     }
   },
   {
@@ -194,9 +194,9 @@ export const PlanetData = [
     "radius": "24,622 KM",
     "temperature": "-201°c",
     "images": {
-      "planet": require("./assets/planet-neptune.svg"),
-      "internal": require("./assets/planet-neptune-internal.svg"),
-      "geology": require("./assets/geology-neptune.png")
+      "planet": require("./assets/planet-neptune.svg").default,
+      "internal": require("./assets/planet-neptune-internal.svg").default,
+      "geology": require("./assets/geology-neptune.png").default
     }
   }
 ]

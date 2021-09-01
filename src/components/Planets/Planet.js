@@ -26,14 +26,11 @@ function Planet() {
 											defaultChecked={defaultChecked}
 											className={context.currentPlanet}
 											onChange={() => {
-												console.log(value);
-												console.log(valueimg);
 												context.setCategory(label);
 											}}
 											tabIndex={+id}
 											checked={context.category === label}
 										/>
-
 										<label htmlFor={id}>{label}</label>
 									</form>
 								</div>
@@ -70,62 +67,61 @@ function Planet() {
 						<h1>{context.currentPlanet}</h1>
 						{
 							<p>
-								{context.data &&
-									context.data.length > 0 &&
-									context.category === 'Overview' &&
-									context.data[context.planetIndex].overview.content}
+								{context.category === 'Overview' &&
+									context.data[2].overview.content}
 							</p>
 						}
 						{
 							<p>
-								{context.data &&
-									context.data.length > 0 &&
-									context.category === 'Structure' &&
+								{context.category === 'Structure' &&
 									context.data[context.planetIndex].structure.content}
 							</p>
 						}
 						{
 							<p>
-								{context.data &&
-									context.data.length > 0 &&
-									context.category === 'Surface' &&
+								{context.category === 'Surface' &&
 									context.data[context.planetIndex].geology.content}
 							</p>
 						}
-						<p>Source: Wikipedia</p>
+						{context.category === 'Overview' ? (
+							<p>
+								Source:{' '}
+								<a href={context.data[context.planetIndex].overview.source}>
+									Wikipedia
+								</a>
+							</p>
+						) : context.category === 'Structure' ? (
+							<p>
+								Source:{' '}
+								<a href={context.data[context.planetIndex].structure.source}>
+									Wikipedia
+								</a>
+							</p>
+						) : (
+							<p>
+								Source:{' '}
+								<a href={context.data[context.planetIndex].geology.source}>
+									Wikipedia
+								</a>
+							</p>
+						)}
 					</div>
 					<div id='facts' className='flex'>
 						<div id='rotation' className='planet__facts flex'>
 							<p>Rotation Time</p>
-							<span>
-								{context.data &&
-									context.data.length > 0 &&
-									context.data[context.planetIndex].rotation}
-							</span>
+							<span>{context.data[context.planetIndex].rotation}</span>
 						</div>
 						<div id='revolution' className='planet__facts flex'>
 							<p>Revolution Time</p>
-							<span>
-								{context.data &&
-									context.data.length > 0 &&
-									context.data[context.planetIndex].revolution}
-							</span>
+							<span>{context.data[context.planetIndex].revolution}</span>
 						</div>
 						<div id='radius' className='planet__facts flex'>
-							<p>Radius</p>{' '}
-							<span>
-								{context.data &&
-									context.data.length > 0 &&
-									context.data[context.planetIndex].radius}
-							</span>
+							<p>Radius</p>
+							<span>{context.data[context.planetIndex].radius}</span>
 						</div>
 						<div id='temp' className='planet__facts flex'>
-							<p>Average Temp</p>{' '}
-							<span>
-								{context.data &&
-									context.data.length > 0 &&
-									context.data[context.planetIndex].temperature}
-							</span>
+							<p>Average Temp</p>
+							<span>{context.data[context.planetIndex].temperature}</span>
 						</div>
 					</div>
 				</div>
