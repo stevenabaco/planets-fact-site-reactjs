@@ -1,6 +1,7 @@
 //Import modules
 import React from 'react';
 //Import dependencies
+
 import Navbar from '../../components/Navbar/Navbar';
 //Import CSS
 import './Layout.css';
