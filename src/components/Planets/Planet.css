@@ -118,7 +118,23 @@ border-bottom: 2px solid var(--color-12);
 
 
 
+
 /* SHARED CLASSES */
 .flex {
   display: flex;
 }
+/* Regular Link styles */
+
+.link:link {
+  color: rgb(198, 202, 202);
+  font-weight: 800;  
+}
+.link:visited {
+  color: grey;
+}
+.link:hover {
+  color: white
+}
+
+
+

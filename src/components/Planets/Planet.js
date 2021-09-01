@@ -86,21 +86,21 @@ function Planet() {
 						{context.category === 'Overview' ? (
 							<p>
 								Source:{' '}
-								<a href={context.data[context.planetIndex].overview.source}>
+								<a class="link" href={context.data[context.planetIndex].overview.source}>
 									Wikipedia
 								</a>
 							</p>
 						) : context.category === 'Structure' ? (
 							<p>
 								Source:{' '}
-								<a href={context.data[context.planetIndex].structure.source}>
+								<a class="link" href={context.data[context.planetIndex].structure.source}>
 									Wikipedia
 								</a>
 							</p>
 						) : (
 							<p>
 								Source:{' '}
-								<a href={context.data[context.planetIndex].geology.source}>
+								<a class="link" href={context.data[context.planetIndex].geology.source}>
 									Wikipedia
 								</a>
 							</p>
