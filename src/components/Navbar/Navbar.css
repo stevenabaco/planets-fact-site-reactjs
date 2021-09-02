@@ -114,25 +114,46 @@
 	cursor: pointer;
 }
 
-@media only screen and (min-width: 1208px) {
+@media only screen and (min-width: 768px) {
 	#navbar {
 		display: flex;
+		flex-direction: column;
+		border-bottom: none;
 	}
+
+	#navbar__logo {
+	font-family: 'Antonio', sans-serif;
+	font-size: 28px;
+	font-weight: 500;
+	text-transform: uppercase;
+	text-decoration: none;
+	color: var(--color-1);
+	justify-self: start;
+	align-self: center;
+	cursor: pointer;
+}
 	.nav__menu {
 		flex-direction: row;
-		flex: 1;
-    justify-content: flex-end;
+		/* flex: 1; */
+    justify-content: center;
     align-items: center;
-		position: relative;
-		height: 56px;
-		width: 0;
-		top: 0;
-		right: 0;
+		/* position: relative; */
+		height: 72px;
+		/* width: 0; */
+		bottom: 0;
+		padding-bottom: 2rem;
+		/* right: 0; */
     transform: translateX(0%);
+		border-bottom: 1px solid grey;
 	}
 
   .nav__item {
     border-bottom: none;
+		width: 100%;
+		font-size: .86rem;
+		font-weight: 300;
+		letter-spacing: 1px;
+	
   }
   .nav__links {
     width: 100% ;
