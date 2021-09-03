@@ -1,7 +1,7 @@
 #navbar {
 	position: relative;
 	height: 68px;
-  justify-content: center;
+	justify-content: center;
 	/* padding: 17px 24px; */
 	border-bottom: 1px solid var(--color-4);
 }
@@ -19,87 +19,96 @@
 }
 
 .nav__links {
+	display: flex;
 	text-transform: uppercase;
 	text-decoration: none;
 	list-style: none;
 	color: var(--color-1);
 	justify-content: space-between;
-	padding: 1rem 0.5rem;
+	align-items: center;
+	padding: 1rem 1.5rem;
 	width: 95vw;
-
 }
 
-.nav__menu { 
+.nav__menu {
 	display: flex;
 	position: relative;
-	flex-direction:column;
-  width:100%;
-  height:89vh;
+	flex-direction: column;
+	width: 100%;
+	height: 89vh;
 	position: absolute;
 	top: 69px;
 	transform: translateX(-110%);
-  opacity: 1;
-  align-items: center;
+	opacity: 1;
+	align-items: center;
 	padding-top: 1rem;
-
 }
 
 .nav__menu.active {
-	position: absolute;
+	display: flex;
+	width: 100%;
+	justify-content: start;
 	z-index: 1000;
-  transform: translateX(0);
-  background-color: black;
+	transform: translateX(0);
+	background-color: black;
 	left: 0;
-  opacity: 1;
-	transition: all .5s ease-out;
-	
+	opacity: 1;
+	transition: all 0.5s ease-out;
+	padding: 0 1rem;
 }
 
 .nav__item {
 	display: flex;
+	width: 100%;
 	justify-content: space-between;
-	align-items: center;
+	/* align-items: center; */
 	height: 60px;
 	border-bottom: 1px solid var(--color-4);
 }
 
-
-
 .nav__links span {
+	display: flex;
+	flex-direction: column;
 	font-size: 2rem;
+
 }
 
+.planet__marker {
+	display:flex;
+	justify-content:start;
+	align-items: center;
+}
 .circle {
-  margin-right: 1rem;
-  width: 20px;
-  height:20px;
-  display: inline-block;
-  border-radius: 50%;
+	margin-right: 1rem;
+	width: 20px;
+	height: 20px;
+	display: inline-block;
+	border-radius: 50%;
 }
 
 .circle.mercury {
-  background-color: var(--color-Mercury);
+	background-color: var(--color-Mercury);
 }
 .circle.venus {
-  background-color: var(--color-Venus);
+	background-color: var(--color-Venus);
 }
 .circle.earth {
-  background-color: var(--color-Earth);
+	background-color: var(--color-Earth);
 }
 .circle.mars {
-  background-color: var(--color-Mars);
+	background-color: var(--color-Mars);
 }
 .circle.jupiter {
-  background-color: var(--color-Jupiter);
+	background-color: var(--color-Jupiter);
 }
 .circle.saturn {
-  background-color: var(--color-Saturn);
+	background-color: var(--color-Saturn);
 }
 .circle.uranus {
-  background-color: var(--color-Uranus);
+	background-color: var(--color-Uranus);
 }
 .circle.neptune {
-  background-color: var(--color-Neptune);
+	background-color: var(--color-Neptune);
 }
 
 #menu__icon {
@@ -113,6 +122,55 @@
 }
 
 @media only screen and (min-width: 768px) {
+		/* Planet Hover Effects */
+	#mercury:hover {
+		border-bottom: 4px solid var(--color-Mercury);
+	}
+	#mercury.selected{
+		border-bottom: 4px solid var(--color-Mercury);
+	}
+	#venus:hover {
+		border-bottom: 4px solid var(--color-Venus);
+	}
+		#venus.selected{
+		border-bottom: 4px solid var(--color-Venus);
+	}
+	#earth:hover {
+		border-bottom: 4px solid var(--color-Earth);
+	}
+		#earth.selected{
+		border-bottom: 4px solid var(--color-Earth);
+	}
+	#mars:hover {
+		border-bottom: 4px solid var(--color-Mars);
+	}
+		#mars.selected{
+		border-bottom: 4px solid var(--color-Mars);
+	}
+	#jupiter:hover {
+		border-bottom: 4px solid var(--color-Jupiter);
+	}
+		#jupiter.selected{
+		border-bottom: 4px solid var(--color-Jupiter);
+	}
+	#saturn:hover {
+		border-bottom: 4px solid var(--color-Saturn);
+	}
+		#saturn.selected{
+		border-bottom: 4px solid var(--color-Saturn);
+	}
+	#uranus:hover {
+		border-bottom: 4px solid var(--color-Uranus);
+	}
+		#uranus.selected{
+		border-bottom: 4px solid var(--color-Uranus);
+	}
+	#neptune:hover {
+		border-bottom: 4px solid var(--color-Neptune);
+	}
+		#neptune.selected{
+		border-bottom: 4px solid var(--color-Neptune);
+	}
 	#navbar {
 		display: flex;
 		flex-direction: column;
@@ -123,30 +181,29 @@
 	.nav__menu {
 		flex-direction: row;
 		/* flex: 1; */
-    justify-content: space-between;
-    align-items: center;
+		justify-content: space-between;
+		align-items: center;
 		/* position: relative; */
 		height: 72px;
 		/* width: 0; */
 		bottom: 0;
 		padding-bottom: 2rem;
 		/* right: 0; */
-    transform: translateX(0%);
+		transform: translateX(0%);
 		border-bottom: 1px solid grey;
 	}
 
-  .nav__item {
-    border-bottom: none;
+	.nav__item {
+		border-bottom: none;
 		width: 100%;
-		font-size: .86rem;
+		font-size: 0.86rem;
 		font-weight: 300;
 		letter-spacing: 1px;
-	
-  }
-  .nav__links {
-    width: 100% ;
-    justify-items: center;
-  }
+	}
+	.nav__links {
+		width: 100%;
+		justify-items: center;
+	}
 	#menu__icon {
 		display: none;
 	}
@@ -154,11 +211,11 @@
 	.nav__menu.active {
 		display: none;
 	}
+
 }
 
 /* START DESKTOP VIEW */
-@media only screen and (min-width: 1024px) {
-	
+@media only screen and (min-width: 1200px) {
 	#navbar {
 		position: relative;
 		flex-direction: row;
@@ -169,13 +226,13 @@
 
 	.nav__menu {
 		position: relative;
-		width:100%;
-    justify-content: flex-start;
-    align-items:center;
+		width: 100%;
+		justify-content: flex-start;
+		align-items: center;
 		height: 68px;
 		top: 0;
-		left:0;
-		right:0;
+		left: 0;
+		right: 0;
 		bottom: 0;
 		padding: 2rem;
 		border-bottom: none;
@@ -183,6 +240,6 @@
 	}
 
 	#navbar__logo {
-margin-left: 1rem;
-}
+		margin-left: 1rem;
+	}
 }

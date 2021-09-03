@@ -118,7 +118,7 @@
 }
 
 #radio__toolbar input[type='radio']:checked + label {
-	border-bottom: 2px solid var(--color-12);
+	border-bottom: 3px solid var(--color-12);
 }
 
 /* SHARED CLASSES */
@@ -139,6 +139,7 @@
 }
 
 @media only screen and (min-width: 768px) {
+
 	#planet__wrapper {
 		padding: 10rem 2rem;
 		flex-direction: row;

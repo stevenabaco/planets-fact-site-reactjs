@@ -36,9 +36,10 @@ function Navbar() {
 					context.setPlanetIndex(1);
 					closeMobileMenu();
 				};
-				const handleEarth = () => {
+				const handleEarth = e => {
 					context.setCurrentPlanet('Earth');
 					context.setPlanetIndex(2);
+
 					closeMobileMenu();
 				};
 				const handleMars = () => {
@@ -85,13 +86,15 @@ function Navbar() {
 											exact
 											to='/mercury'
 											onClick={handleMercury}
+											activeClassName='selected'
+											id='mercury'
 											className='nav__links'>
 											{click ? (
 												<>
 													<div className='planet__marker'>
 														<div className='circle mercury'></div>Mercury
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Mercury'
@@ -102,14 +105,17 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/venus'
+											id='venus'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleVenus}>
 											{click ? (
+												/* Adds the circle for mobile nav only */
 												<>
 													<div className='planet__marker'>
 														<div className='circle venus'></div>Venus
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Venus'
@@ -119,6 +125,7 @@ function Navbar() {
 									<li className='nav__item'>
 										<NavLink
 											exact
+											id='earth'
 											to='/earth'
 											className='nav__links'
 											onClick={handleEarth}>
@@ -127,7 +134,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle earth'></div>Earth
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Earth'
@@ -138,6 +145,7 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/mars'
+											id='mars'
 											className='nav__links'
 											onClick={handleMars}>
 											{click ? (
@@ -145,7 +153,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle mars'></div>Mars
 													</div>
-													<span>˃</span>{' '}
+													<span>></span>{' '}
 												</>
 											) : (
 												'Mars'
@@ -156,6 +164,7 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/jupiter'
+											id='jupiter'
 											className='nav__links'
 											onClick={handleJupiter}>
 											{click ? (
@@ -163,7 +172,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle jupiter'></div>Jupiter
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Jupiter'
@@ -174,6 +183,7 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/saturn'
+											id='saturn'
 											className='nav__links'
 											onClick={handleSaturn}>
 											{click ? (
@@ -181,7 +191,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle saturn'></div>Saturn
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Saturn'
@@ -192,6 +202,7 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/uranus'
+											id='uranus'
 											className='nav__links'
 											onClick={handleUranus}>
 											{click ? (
@@ -199,7 +210,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle uranus'></div>Uranus
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Uranus'
@@ -210,6 +221,7 @@ function Navbar() {
 										<NavLink
 											exact
 											to='/neptune'
+											id='neptune'
 											className='nav__links'
 											onClick={handleNeptune}>
 											{click ? (
@@ -218,7 +230,7 @@ function Navbar() {
 													<div className='planet__marker'>
 														<div className='circle neptune'></div>Neptune
 													</div>
-													<span>˃</span>
+													<span>></span>
 												</>
 											) : (
 												'Neptune'
