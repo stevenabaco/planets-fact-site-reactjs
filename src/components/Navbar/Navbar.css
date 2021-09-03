@@ -28,6 +28,8 @@
 	align-items: center;
 	padding: 1rem 1.5rem;
 	width: 95vw;
+	transition: all .8s ease-in-out;
+	border-bottom: 4px solid transparent;
 }
 
 .nav__menu {

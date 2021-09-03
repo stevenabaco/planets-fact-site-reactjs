@@ -128,6 +128,7 @@ function Navbar() {
 											id='earth'
 											to='/earth'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleEarth}>
 											{click ? (
 												<>
@@ -147,6 +148,7 @@ function Navbar() {
 											to='/mars'
 											id='mars'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleMars}>
 											{click ? (
 												<>
@@ -166,6 +168,7 @@ function Navbar() {
 											to='/jupiter'
 											id='jupiter'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleJupiter}>
 											{click ? (
 												<>
@@ -185,6 +188,7 @@ function Navbar() {
 											to='/saturn'
 											id='saturn'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleSaturn}>
 											{click ? (
 												<>
@@ -204,6 +208,7 @@ function Navbar() {
 											to='/uranus'
 											id='uranus'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleUranus}>
 											{click ? (
 												<>
@@ -223,6 +228,7 @@ function Navbar() {
 											to='/neptune'
 											id='neptune'
 											className='nav__links'
+											activeClassName='selected'
 											onClick={handleNeptune}>
 											{click ? (
 												<>
