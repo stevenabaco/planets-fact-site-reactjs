@@ -83,7 +83,7 @@ function App() {
 						<Route exact path='/neptune'>
 							<Planet />
 						</Route>
-						<Route exact path='/'>
+						<Route exact basename={process.env.PUBLIC_URL}>
 							<Redirect to='/earth' />
 						</Route>
 					</Switch>
