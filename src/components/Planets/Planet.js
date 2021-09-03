@@ -16,24 +16,24 @@ function Planet() {
 							({ id, name, label, value, valueimg, defaultChecked }) => (
 								<div className='categorySelector' key={id}>
 									<form>
-										
-											<input
-												type='radio'
-												key={id}
-												id={id}
-												name={name}
-												value={value.toString()}
-												valueimg={valueimg}
-												defaultChecked={defaultChecked}
-												className={context.currentPlanet}
-												onChange={() => {
-													context.setCategory(label);
-												}}
-												tabIndex={+id}
-												checked={context.category === label}
-											/>
-											<label htmlFor={id}>{label}</label>
-						
+										<input
+											type='radio'
+											key={id}
+											id={id}
+											name={name}
+											value={value.toString()}
+											valueimg={valueimg}
+											defaultChecked={defaultChecked}
+											className={context.currentPlanet}
+											onChange={() => {
+												context.setCategory(label);
+											}}
+											tabIndex={+id}
+											checked={context.category === label}
+										/>
+										<label htmlFor={id} className={context.currentPlanet}>
+											{label}
+										</label>
 									</form>
 								</div>
 							)
@@ -49,6 +49,7 @@ function Planet() {
 								/>
 								<img
 									id='surface__img'
+									className='fade-in'
 									src={context.data[context.planetIndex].images.geology}
 									alt={context.currentPlanet}
 								/>
@@ -57,11 +58,13 @@ function Planet() {
 							<img
 								src={context.data[context.planetIndex].images.internal}
 								alt={context.data[context.planetIndex].name}
+								className='fade-in'
 							/>
 						) : (
 							<img
 								src={context.data[context.planetIndex].images.planet}
 								alt={context.data[context.planetIndex].name}
+								className='fade-in'
 							/>
 						)}
 					</div>
@@ -71,7 +74,7 @@ function Planet() {
 							<div>
 								<p>
 									{context.category === 'Overview' &&
-										context.data[2].overview.content}
+										context.data[context.planetIndex].overview.content}
 								</p>
 							</div>
 						}

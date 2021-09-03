@@ -105,21 +105,89 @@
 	padding: 10px;
 	border-bottom: 5px solid transparent;
 	cursor: pointer;
+	font-weight: 700;
 }
 
-/* Add blue border to label on focus */
-#radio__toolbar input[type='radio']:focus + label {
-	border-bottom: 5px solid var(--color-12);
+/* Add bottom border to label on focus based on Planet selected */
+#radio__toolbar input[type='radio']:focus + label.Mercury {
+	border-bottom: 5px solid var(--Mercury);
+}
+#radio__toolbar input[type='radio']:focus + label.Venus {
+	border-bottom: 5px solid var(--Venus);
+}
+#radio__toolbar input[type='radio']:focus + label.Earth {
+	border-bottom: 5px solid var(--Earth);
+}
+#radio__toolbar input[type='radio']:focus + label.Mars {
+	border-bottom: 5px solid var(--Mars);
+}
+#radio__toolbar input[type='radio']:focus + label.Jupiter {
+	border-bottom: 5px solid var(--Jupiter);
+}
+#radio__toolbar input[type='radio']:focus + label.Saturn {
+	border-bottom: 5px solid var(--Saturn);
+}
+#radio__toolbar input[type='radio']:focus + label.Uranus {
+	border-bottom: 5px solid var(--Uranus);
+}
+#radio__toolbar input[type='radio']:focus + label.Neptune {
+	border-bottom: 5px solid var(--Neptune);
 }
 
-/* Add hover effect for radio label */
-#radio__toolbar label:hover {
-	border-bottom: 2px solid var(--color-12);
+
+/* Add hover effect for radio labels bosed on Planet (using classes) */
+
+#radio__toolbar label.Mercury:hover {
+	border-bottom: 5px solid var(--color-Mercury);
+}
+#radio__toolbar label.Venus:hover {
+	border-bottom: 5px solid var(--color-Venus);
+}
+#radio__toolbar label.Earth:hover {
+	border-bottom: 5px solid var(--color-Earth);
+}
+#radio__toolbar label.Mars:hover {
+	border-bottom: 5px solid var(--color-Mars);
+}
+#radio__toolbar label.Jupiter:hover {
+	border-bottom: 5px solid var(--color-Jupiter);
+}
+#radio__toolbar label.Saturn:hover {
+	border-bottom: 5px solid var(--color-Saturn);
+}
+#radio__toolbar label.Uranus:hover {
+	border-bottom: 5px solid var(--color-Uranus);
+}
+#radio__toolbar label.Neptune:hover {
+	border-bottom: 5px solid var(--color-Neptune);
 }
 
-#radio__toolbar input[type='radio']:checked + label {
-	border-bottom: 3px solid var(--color-12);
+/* Add bottom border on selected based on Planet (using classes) */
+#radio__toolbar input[type='radio']:checked + label.Mercury {
+	border-bottom: 5px solid var(--color-Mercury);
 }
+#radio__toolbar input[type='radio']:checked + label.Venus {
+	border-bottom: 5px solid var(--color-Venus);
+}
+#radio__toolbar input[type='radio']:checked + label.Earth {
+	border-bottom: 5px solid var(--color-Earth);
+}
+#radio__toolbar input[type='radio']:checked + label.Mars {
+	border-bottom: 5px solid var(--color-Mars);
+}
+#radio__toolbar input[type='radio']:checked + label.Jupiter {
+	border-bottom: 5px solid var(--color-Jupiter);
+}
+#radio__toolbar input[type='radio']:checked + label.Saturn {
+	border-bottom: 5px solid var(--color-Saturn);
+}
+#radio__toolbar input[type='radio']:checked + label.Uranus {
+	border-bottom: 5px solid var(--color-Uranus);
+}
+#radio__toolbar input[type='radio']:checked + label.Neptune {
+	border-bottom: 5px solid var(--color-Neptune);
+}
+
 
 /* SHARED CLASSES */
 .flex {
@@ -138,7 +206,55 @@
 	color: white;
 }
 
-@media only screen and (min-width: 768px) {
+/* Create Fade effect for images */
+
+.fade-in {
+  animation: fadeIn ease 1s;
+  -webkit-animation: fadeIn ease 1s;
+  -moz-animation: fadeIn ease 1s;
+  -o-animation: fadeIn ease 1s;
+  -ms-animation: fadeIn ease 1s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+
+
+@media only screen and (min-width: 891px) {
 
 	#planet__wrapper {
 		padding: 10rem 2rem;
@@ -174,13 +290,13 @@
 	#planet__content {
 		order: 2;
 		width: 327px;
-		height: 235px;
+		min-height: 327px;
 		margin: 0.1rem;
 		text-align: left;
 		flex-direction: column;
 		justify-content: space-evenly;
 		font-family: 'Spartan', sans-serif;
-		font-size: 11px;
+		font-size: 1rem;
 		line-height: 22px;
 		flex-basis: 40%;
 		align-items: baseline;
@@ -192,6 +308,10 @@
 		font-size: 48px;
 		font-weight: 400;
 		margin-bottom: 2rem;
+	}
+
+	#planet__content p {
+		line-height: 1.8rem;
 	}
 
 	#radio__toolbar {
@@ -206,21 +326,47 @@
 	#radio__toolbar label {
 		width: 100%;
 		height: 100%;
-		border-bottom: none;
+		border-bottom: 5px solid transparent;
 		padding: 1rem;
 	}
 
-	/* START hover effect for radio label */
-	#radio__toolbar label:hover {
-		background-color: var(--color-5);
-		border-bottom: none;
-	}
+/* Add bottom border on selected based on Planet (using classes) */
 
-	#radio__toolbar input[type='radio']:checked + label {
-		background-color: var(--color-5);
-		border-bottom: none;
-	}
-	/* END hover effect for radio label */
+#radio__toolbar input[type='radio'] + label {
+	font-size: 1.1rem;
+}
+
+#radio__toolbar input[type='radio']:checked + label.Mercury {
+	background-color: var(--color-Mercury);
+	color: black;
+	font-weight: 700;
+}
+#radio__toolbar input[type='radio']:checked + label.Venus {
+background-color: var(--color-Venus);
+color: black;
+}
+#radio__toolbar input[type='radio']:checked + label.Earth {
+background-color: var(--color-Earth);
+}
+#radio__toolbar input[type='radio']:checked + label.Mars {
+background-color: var(--color-Mars);
+}
+#radio__toolbar input[type='radio']:checked + label.Jupiter {
+background-color: var(--color-Jupiter);
+color: black;
+}
+#radio__toolbar input[type='radio']:checked + label.Saturn {
+	background-color: var(--color-Saturn);
+	color: black;
+}
+#radio__toolbar input[type='radio']:checked + label.Uranus {
+	background-color: var(--color-Uranus);
+	color: black;
+}
+#radio__toolbar input[type='radio']:checked + label.Neptune {
+	background-color: var(--color-Neptune);
+}
+
 
 	.categorySelector {
 		border: 1px solid var(--color-4);
@@ -320,6 +466,7 @@
 	#radio__toolbar label {
 		font-size: 1.2rem;
 	}
+
 
 .planet__facts.flex {
 	max-width: 20.5rem;

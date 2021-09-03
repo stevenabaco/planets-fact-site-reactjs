@@ -123,7 +123,7 @@
 	cursor: pointer;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 891px) {
 		/* Planet Hover Effects */
 	#mercury:hover {
 		border-bottom: 4px solid var(--color-Mercury);
