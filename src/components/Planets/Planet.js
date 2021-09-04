@@ -22,13 +22,13 @@ function Planet() {
 											id={id}
 											name={name}
 											value={value.toString()}
-											valueimg={valueimg}
+											// valueimg={valueimg}
 											defaultChecked={defaultChecked}
 											className={context.currentPlanet}
 											onChange={() => {
 												context.setCategory(label);
 											}}
-											tabIndex={id}
+											tabIndex={+id}
 											checked={context.category === label}
 										/>
 										<label htmlFor={id} className={context.currentPlanet}>
