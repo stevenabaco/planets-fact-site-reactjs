@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/planets-fact-site-reactjs/static/css/main.56356e67.chunk.css",
-    "main.js": "/planets-fact-site-reactjs/static/js/main.0891b89e.chunk.js",
-    "main.js.map": "/planets-fact-site-reactjs/static/js/main.0891b89e.chunk.js.map",
+    "main.js": "/planets-fact-site-reactjs/static/js/main.351beea2.chunk.js",
+    "main.js.map": "/planets-fact-site-reactjs/static/js/main.351beea2.chunk.js.map",
     "runtime-main.js": "/planets-fact-site-reactjs/static/js/runtime-main.5cd72bd3.js",
     "runtime-main.js.map": "/planets-fact-site-reactjs/static/js/runtime-main.5cd72bd3.js.map",
-    "static/js/2.25edaf00.chunk.js": "/planets-fact-site-reactjs/static/js/2.25edaf00.chunk.js",
-    "static/js/2.25edaf00.chunk.js.map": "/planets-fact-site-reactjs/static/js/2.25edaf00.chunk.js.map",
+    "static/js/2.24c0c754.chunk.js": "/planets-fact-site-reactjs/static/js/2.24c0c754.chunk.js",
+    "static/js/2.24c0c754.chunk.js.map": "/planets-fact-site-reactjs/static/js/2.24c0c754.chunk.js.map",
     "static/js/3.9386a56a.chunk.js": "/planets-fact-site-reactjs/static/js/3.9386a56a.chunk.js",
     "static/js/3.9386a56a.chunk.js.map": "/planets-fact-site-reactjs/static/js/3.9386a56a.chunk.js.map",
     "index.html": "/planets-fact-site-reactjs/index.html",
     "static/css/main.56356e67.chunk.css.map": "/planets-fact-site-reactjs/static/css/main.56356e67.chunk.css.map",
-    "static/js/2.25edaf00.chunk.js.LICENSE.txt": "/planets-fact-site-reactjs/static/js/2.25edaf00.chunk.js.LICENSE.txt",
+    "static/js/2.24c0c754.chunk.js.LICENSE.txt": "/planets-fact-site-reactjs/static/js/2.24c0c754.chunk.js.LICENSE.txt",
     "static/media/background-stars.f6233a6a.svg": "/planets-fact-site-reactjs/static/media/background-stars.f6233a6a.svg",
     "static/media/geology-earth.png": "/planets-fact-site-reactjs/static/media/geology-earth.61d2b324.png",
     "static/media/geology-jupiter.png": "/planets-fact-site-reactjs/static/media/geology-jupiter.93e4e021.png",
@@ -40,8 +40,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.5cd72bd3.js",
-    "static/js/2.25edaf00.chunk.js",
+    "static/js/2.24c0c754.chunk.js",
     "static/css/main.56356e67.chunk.css",
-    "static/js/main.0891b89e.chunk.js"
+    "static/js/main.351beea2.chunk.js"
   ]
 }
