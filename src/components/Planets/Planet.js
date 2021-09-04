@@ -10,7 +10,7 @@ function Planet() {
 	return (
 		<Consumer>
 			{context => (
-				<div id='planet__wrapper' planet={context.currentPlanet}>
+				<div id='planet__wrapper'>
 					<div id='radio__toolbar' className='flex'>
 						{ContentTabs.map(
 							({ id, name, label, value, valueimg, defaultChecked }) => (
