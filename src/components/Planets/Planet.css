@@ -2,8 +2,7 @@
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
-	min-width: 100%;
-	height: 100%;
+	width: 100%;
 	z-index: -1;
 }
 
@@ -134,7 +133,6 @@
 	border-bottom: 5px solid var(--Neptune);
 }
 
-
 /* Add hover effect for radio labels bosed on Planet (using classes) */
 
 #radio__toolbar label.Mercury:hover {
@@ -188,7 +186,6 @@
 	border-bottom: 5px solid var(--color-Neptune);
 }
 
-
 /* SHARED CLASSES */
 .flex {
 	display: flex;
@@ -209,53 +206,50 @@
 /* Create Fade effect for images */
 
 .fade-in {
-  animation: fadeIn ease 1s;
-  -webkit-animation: fadeIn ease 1s;
-  -moz-animation: fadeIn ease 1s;
-  -o-animation: fadeIn ease 1s;
-  -ms-animation: fadeIn ease 1s;
+	animation: fadeIn ease 1s;
+	-webkit-animation: fadeIn ease 1s;
+	-moz-animation: fadeIn ease 1s;
+	-o-animation: fadeIn ease 1s;
+	-ms-animation: fadeIn ease 1s;
 }
 
 @keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @-moz-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @-webkit-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
 @-o-keyframes fadeIn {
-  0% {
-    opacity:0;
-  }
-  100% {
-    opacity:1;
-  }
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 
-
-
 @media only screen and (min-width: 891px) {
-
 	#planet__wrapper {
 		padding: 10rem 2rem;
 		flex-direction: row;
@@ -280,12 +274,12 @@
 	}
 
 	#surface__img {
-	position: absolute;
-	max-width: 7rem;
-	max-height: 7rem;
-	left: 25%;
-	top: 60%;
-}
+		position: absolute;
+		max-width: 7rem;
+		max-height: 7rem;
+		left: 25%;
+		top: 60%;
+	}
 
 	#planet__content {
 		order: 2;
@@ -330,43 +324,42 @@
 		padding: 1rem;
 	}
 
-/* Add bottom border on selected based on Planet (using classes) */
+	/* Add bottom border on selected based on Planet (using classes) */
 
-#radio__toolbar input[type='radio'] + label {
-	font-size: 1.1rem;
-}
+	#radio__toolbar input[type='radio'] + label {
+		font-size: 1.1rem;
+	}
 
-#radio__toolbar input[type='radio']:checked + label.Mercury {
-	background-color: var(--color-Mercury);
-	color: black;
-	font-weight: 700;
-}
-#radio__toolbar input[type='radio']:checked + label.Venus {
-background-color: var(--color-Venus);
-color: black;
-}
-#radio__toolbar input[type='radio']:checked + label.Earth {
-background-color: var(--color-Earth);
-}
-#radio__toolbar input[type='radio']:checked + label.Mars {
-background-color: var(--color-Mars);
-}
-#radio__toolbar input[type='radio']:checked + label.Jupiter {
-background-color: var(--color-Jupiter);
-color: black;
-}
-#radio__toolbar input[type='radio']:checked + label.Saturn {
-	background-color: var(--color-Saturn);
-	color: black;
-}
-#radio__toolbar input[type='radio']:checked + label.Uranus {
-	background-color: var(--color-Uranus);
-	color: black;
-}
-#radio__toolbar input[type='radio']:checked + label.Neptune {
-	background-color: var(--color-Neptune);
-}
-
+	#radio__toolbar input[type='radio']:checked + label.Mercury {
+		background-color: var(--color-Mercury);
+		color: black;
+		font-weight: 700;
+	}
+	#radio__toolbar input[type='radio']:checked + label.Venus {
+		background-color: var(--color-Venus);
+		color: black;
+	}
+	#radio__toolbar input[type='radio']:checked + label.Earth {
+		background-color: var(--color-Earth);
+	}
+	#radio__toolbar input[type='radio']:checked + label.Mars {
+		background-color: var(--color-Mars);
+	}
+	#radio__toolbar input[type='radio']:checked + label.Jupiter {
+		background-color: var(--color-Jupiter);
+		color: black;
+	}
+	#radio__toolbar input[type='radio']:checked + label.Saturn {
+		background-color: var(--color-Saturn);
+		color: black;
+	}
+	#radio__toolbar input[type='radio']:checked + label.Uranus {
+		background-color: var(--color-Uranus);
+		color: black;
+	}
+	#radio__toolbar input[type='radio']:checked + label.Neptune {
+		background-color: var(--color-Neptune);
+	}
 
 	.categorySelector {
 		border: 1px solid var(--color-4);
@@ -374,8 +367,9 @@ color: black;
 		text-align: center;
 	}
 
-	#facts {
+	#facts.flex {
 		min-width: 100%;
+		max-height: 5rem;
 		order: 4;
 		flex-direction: row;
 		justify-content: space-between;
@@ -405,8 +399,8 @@ color: black;
 
 @media only screen and (min-width: 1240px) {
 	#planet__wrapper {
-		padding: 6rem 9rem;
-		flex-direction: row ;
+		padding: 3rem 9rem;
+		flex-direction: row;
 		justify-content: space-between;
 		align-items: stretch;
 		flex-wrap: wrap;
@@ -429,28 +423,27 @@ color: black;
 	}
 
 	#surface__img {
-	position: absolute;
-	max-width: 15rem;
-	max-height: 15rem;
-	left: 25%;
-	top: 60%;
-}
+		position: absolute;
+		max-width: 15rem;
+		max-height: 15rem;
+		left: 25%;
+		top: 60%;
+	}
 
 	#planet__content {
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		height: 20rem;
-		justify-content:space-evenly;
+		justify-content: space-evenly;
 	}
 
 	#planet__content h1 {
 		font-size: 80px;
 		margin-bottom: 3rem;
 	}
-	
+
 	#planet__content p {
-	
 		font-size: 14px;
 	}
 
@@ -458,20 +451,24 @@ color: black;
 		position: absolute;
 		max-width: 27.5rem;
 		right: 10rem;
-		top: 30rem;
+		top: 24rem;
 		margin: 2rem auto;
-		height: 15rem
+		height: 15rem;
 	}
 
 	#radio__toolbar label {
 		font-size: 1.2rem;
 	}
 
+	#facts.flex {
+		height: 8rem;
+	}
 
-.planet__facts.flex {
-	max-width: 20.5rem;
-}
-.planet__facts p {
+	.planet__facts.flex {
+		max-width: 14rem;
+		height: 8rem;
+	}
+	.planet__facts p {
 		font-size: 1rem;
 	}
 	.planet__facts span {
