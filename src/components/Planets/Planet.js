@@ -28,7 +28,7 @@ function Planet() {
 											onChange={() => {
 												context.setCategory(label);
 											}}
-											tabIndex={+id}
+											tabIndex={id}
 											checked={context.category === label}
 										/>
 										<label htmlFor={id} className={context.currentPlanet}>

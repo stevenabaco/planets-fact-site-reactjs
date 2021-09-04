@@ -5,7 +5,7 @@ import earthSurfaceImg from '../../assets/geology-earth.png';
 
 export const ContentTabs = [
 	{
-		id: '1',
+		id: 'A',
 		name: 'content',
 		label: 'Overview',
 		value: 'overview',
@@ -13,7 +13,7 @@ export const ContentTabs = [
 		defaultChecked: true,
 	},
 	{
-		id: '2',
+		id: 'B',
 		name: 'content',
 		label: 'Structure',
 		value: 'structure',
@@ -21,7 +21,7 @@ export const ContentTabs = [
 		defaultChecked: false,
 	},
 	{
-		id: '3',
+		id: 'C',
 		name: 'content',
 		label: 'Surface',
 		value: 'surface',
