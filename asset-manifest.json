@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/planets-fact-site-reactjs/static/css/main.56356e67.chunk.css",
+    "main.css": "/planets-fact-site-reactjs/static/css/main.fe40e067.chunk.css",
     "main.js": "/planets-fact-site-reactjs/static/js/main.7953732e.chunk.js",
     "main.js.map": "/planets-fact-site-reactjs/static/js/main.7953732e.chunk.js.map",
     "runtime-main.js": "/planets-fact-site-reactjs/static/js/runtime-main.5cd72bd3.js",
@@ -10,7 +10,7 @@
     "static/js/3.9386a56a.chunk.js": "/planets-fact-site-reactjs/static/js/3.9386a56a.chunk.js",
     "static/js/3.9386a56a.chunk.js.map": "/planets-fact-site-reactjs/static/js/3.9386a56a.chunk.js.map",
     "index.html": "/planets-fact-site-reactjs/index.html",
-    "static/css/main.56356e67.chunk.css.map": "/planets-fact-site-reactjs/static/css/main.56356e67.chunk.css.map",
+    "static/css/main.fe40e067.chunk.css.map": "/planets-fact-site-reactjs/static/css/main.fe40e067.chunk.css.map",
     "static/js/2.24c0c754.chunk.js.LICENSE.txt": "/planets-fact-site-reactjs/static/js/2.24c0c754.chunk.js.LICENSE.txt",
     "static/media/background-stars.f6233a6a.svg": "/planets-fact-site-reactjs/static/media/background-stars.f6233a6a.svg",
     "static/media/geology-earth.png": "/planets-fact-site-reactjs/static/media/geology-earth.61d2b324.png",
@@ -41,7 +41,7 @@
   "entrypoints": [
     "static/js/runtime-main.5cd72bd3.js",
     "static/js/2.24c0c754.chunk.js",
-    "static/css/main.56356e67.chunk.css",
+    "static/css/main.fe40e067.chunk.css",
     "static/js/main.7953732e.chunk.js"
   ]
 }
