@@ -15,7 +15,7 @@ export const ContentTabs = [
 	{
 		id: '-2',
 		name: 'content',
-		label: 'Structure',
+		label: 'Internal Structure',
 		value: 'structure',
 		// valueimg: earthStructureImg,
 		defaultChecked: false,
@@ -23,7 +23,7 @@ export const ContentTabs = [
 	{
 		id: '-3',
 		name: 'content',
-		label: 'Surface',
+		label: 'Surface Geology',
 		value: 'surface',
 		valueimg: earthSurfaceImg,
 		defaultChecked: false,
