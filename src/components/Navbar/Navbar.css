@@ -203,8 +203,9 @@
 		letter-spacing: 1px;
 	}
 	.nav__links {
+		display:block;
 		width: 100%;
-		justify-items: center;
+	
 	}
 	#menu__icon {
 		display: none;
@@ -217,7 +218,7 @@
 }
 
 /* START DESKTOP VIEW */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1189px) {
 	#navbar {
 		position: relative;
 		flex-direction: row;

@@ -72,7 +72,7 @@ function Navbar() {
 					<>
 						<nav id='navbar'>
 							<div>
-								<NavLink to='/' exact id='navbar__logo' onClick={handleLogo}>
+								<NavLink to='/' alt="Planet Logo" aria-label="homepage earth" exact id='navbar__logo' onClick={handleLogo}>
 									The planets
 								</NavLink>
 							</div>
