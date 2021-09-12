@@ -1,5 +1,5 @@
 //Import Modules
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 //Import Dependencies
 import { ContentTabs } from '../ContentToolbar/ContentToolbar';
 import { Consumer } from '../../components/Context';
