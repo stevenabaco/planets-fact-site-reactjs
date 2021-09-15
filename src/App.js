@@ -1,5 +1,5 @@
 //Import modules
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { PlanetData } from './data';
 import {
 	BrowserRouter as Router,
@@ -20,29 +20,6 @@ function App() {
 	const [currentPlanet, setCurrentPlanet] = useState('Earth');
 	const [planetIndex, setPlanetIndex] = useState(2);
 	const [category, setCategory] = useState('Overview');
-
-
-	// Use fetch to consume local JSON data from API -
-	// const getData = () => {
-	// 	fetch('./data.js', {
-	// 		headers: {
-	// 			'Content-Type': 'application/json',
-	// 			Accept: 'application/json',
-	// 		},
-	// 	})
-	// 		.then(function (response) {
-	// 			console.log(response);
-	// 			return response.json();
-	// 		})
-	// 		.then(function (myJson) {
-	// 			console.log(myJson);
-	// 			setData(myJson);
-	// 		});
-	// };
-	// // Runs get data on first load
-	// useEffect(() => {
-	// 	getData();
-	// }, []);
 
 	return (
 		<Provider

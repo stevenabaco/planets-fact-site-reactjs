@@ -40,7 +40,7 @@ function Planet() {
 						)}
 					</div>
 					<div id='planet__img'>
-						{context.category === 'Surface Geology' ? (
+						{context.category === 'Surface' ? (
 							<div id='summary__surface__container'>
 								<img
 									id='summary__img'
@@ -54,7 +54,7 @@ function Planet() {
 									alt={context.currentPlanet}
 								/>
 							</div>
-						) : context.category === 'Internal Structure' ? (
+						) : context.category === 'Structure' ? (
 							<img
 								src={context.data[context.planetIndex].images.internal}
 								alt={context.data[context.planetIndex].name}
@@ -81,7 +81,7 @@ function Planet() {
 						{
 							<div>
 								<p>
-									{context.category === 'Internal Structure' &&
+									{context.category === 'Structure' &&
 										context.data[context.planetIndex].structure.content}
 								</p>
 							</div>
@@ -89,7 +89,7 @@ function Planet() {
 						{
 							<div>
 								<p>
-									{context.category === 'Surface Geology' &&
+									{context.category === 'Surface' &&
 										context.data[context.planetIndex].geology.content}
 								</p>
 							</div>
@@ -103,7 +103,7 @@ function Planet() {
 									Wikipedia
 								</a>
 							</p>
-						) : context.category === 'Internal Structure' ? (
+						) : context.category === 'Structure' ? (
 							<p>
 								Source:{' '}
 								<a

@@ -1,6 +1,5 @@
 //Import Images
 import earthSummaryImg from '../../assets/planet-earth.svg';
-import earthStructureImg from '../../assets/planet-earth-internal.svg';
 import earthSurfaceImg from '../../assets/geology-earth.png';
 
 export const ContentTabs = [
@@ -15,15 +14,14 @@ export const ContentTabs = [
 	{
 		id: '-2',
 		name: 'content',
-		label: 'Internal Structure',
+		label: 'Structure',
 		value: 'structure',
-		// valueimg: earthStructureImg,
 		defaultChecked: false,
 	},
 	{
 		id: '-3',
 		name: 'content',
-		label: 'Surface Geology',
+		label: 'Surface',
 		value: 'surface',
 		valueimg: earthSurfaceImg,
 		defaultChecked: false,
